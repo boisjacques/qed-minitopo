@@ -143,7 +143,7 @@ if __name__ == '__main__':
     setLogLevel('info')
     net = setupTestbed()
     net.start()
-    if len(sys.argv == 2):
+    if len(sys.argv) == 2:
         if sys.argv[1] == 't':
             runTest(net)
         else:
