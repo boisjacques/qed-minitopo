@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import csv
 import os
+import sys
 import time
 
 from mininet.cli import CLI
@@ -86,6 +87,7 @@ def testEncoder(linkops, bw, dl, lo):
     dl.append(delay)
     lo.append(loss)
 
+
 def setIPaddresses(net, n=2):
     """Sets the IP addresses"""
     for i in range(0, n):
@@ -101,7 +103,7 @@ def setupTestbed():
     return net
 
 
-def runTest(net, i, param="5MB"):
+def runTest(net, i=0, param="5MB"):
     thread = SafeguardThread()
     thread.start()
     print "Running test " + str(i)
@@ -141,5 +143,11 @@ if __name__ == '__main__':
     setLogLevel('info')
     net = setupTestbed()
     net.start()
-    testHandler(net)
+    if len(sys.argv == 2):
+        if sys.argv[1] == 't':
+            runTest(net)
+        else:
+            print "invalid parameter, stopping..."
+    else:
+        testHandler(net)
     net.stop()
