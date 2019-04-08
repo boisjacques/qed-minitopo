@@ -142,10 +142,13 @@ if __name__ == '__main__':
     setLogLevel('info')
     net = setupTestbed()
     net.start()
-    if len(sys.argv) == 2:
+    if len(sys.argv) >= 2:
         if sys.argv[1] == 't':
-            net.startTerms()
-            runTest(net)
+            if sys.argv[2] == "5MB" or sys.argv[2] == "20MB" or sys.argv[2] == "50MB":
+                runTest(net, param=sys.argv[2])
+            else:
+                net.startTerms()
+                runTest(net)
         else:
             print "invalid parameter, stopping..."
     else:
