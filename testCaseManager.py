@@ -22,7 +22,7 @@ class TestCaseManager():
         self.linkopts.append(dict(bw=10, delay='5ms', max_queue_size=1000, use_htb=True))
         self.linkopts.append(dict(bw=10, delay='5ms', max_queue_size=1000, use_htb=True))
 
-        self.linkopts.append(dict(bw=10, delay='110ms', max_queue_size=1000, use_htb=True))
+        self.linkopts.append(dict(bw=10, delay='10ms', max_queue_size=1000, use_htb=True))
         self.linkopts.append(dict(bw=10, delay='100ms', max_queue_size=1000, use_htb=True))
 
         self.linkopts.append(dict(bw=10, delay='15ms', max_queue_size=1000, use_htb=True))
@@ -31,7 +31,7 @@ class TestCaseManager():
         self.linkopts.append(dict(bw=10, delay='5ms', loss=1, max_queue_size=1000, use_htb=True))
         self.linkopts.append(dict(bw=10, delay='5ms', loss=3, max_queue_size=1000, use_htb=True))
 
-        self.linkopts.append(dict(bw=10, delay='110ms', loss=1, max_queue_size=1000, use_htb=True))
+        self.linkopts.append(dict(bw=10, delay='10ms', loss=1, max_queue_size=1000, use_htb=True))
         self.linkopts.append(dict(bw=10, delay='100ms', loss=3, max_queue_size=1000, use_htb=True))
 
         self.linkopts.append(dict(bw=10, delay='15ms', loss=1, max_queue_size=1000, use_htb=True))
@@ -40,7 +40,7 @@ class TestCaseManager():
         self.linkopts.append(dict(bw=10, delay='5ms', loss=3, max_queue_size=1000, use_htb=True))
         self.linkopts.append(dict(bw=10, delay='5ms', loss=7, max_queue_size=1000, use_htb=True))
 
-        self.linkopts.append(dict(bw=10, delay='110ms', loss=3, max_queue_size=1000, use_htb=True))
+        self.linkopts.append(dict(bw=10, delay='10ms', loss=3, max_queue_size=1000, use_htb=True))
         self.linkopts.append(dict(bw=10, delay='100ms', loss=7, max_queue_size=1000, use_htb=True))
 
         self.linkopts.append(dict(bw=10, delay='15ms', loss=3, max_queue_size=1000, use_htb=True))
@@ -50,7 +50,7 @@ class TestCaseManager():
         self.linkopts.append(dict(bw=100, delay='5ms', max_queue_size=1000, use_htb=True))
         self.linkopts.append(dict(bw=100, delay='5ms', max_queue_size=1000, use_htb=True))
 
-        self.linkopts.append(dict(bw=100, delay='110ms', max_queue_size=1000, use_htb=True))
+        self.linkopts.append(dict(bw=100, delay='10ms', max_queue_size=1000, use_htb=True))
         self.linkopts.append(dict(bw=100, delay='100ms', max_queue_size=1000, use_htb=True))
 
         self.linkopts.append(dict(bw=100, delay='15ms', max_queue_size=1000, use_htb=True))
@@ -59,7 +59,7 @@ class TestCaseManager():
         self.linkopts.append(dict(bw=100, delay='5ms', loss=1, max_queue_size=1000, use_htb=True))
         self.linkopts.append(dict(bw=100, delay='5ms', loss=3, max_queue_size=1000, use_htb=True))
 
-        self.linkopts.append(dict(bw=100, delay='110ms', loss=1, max_queue_size=1000, use_htb=True))
+        self.linkopts.append(dict(bw=100, delay='10ms', loss=1, max_queue_size=1000, use_htb=True))
         self.linkopts.append(dict(bw=100, delay='100ms', loss=3, max_queue_size=1000, use_htb=True))
 
         self.linkopts.append(dict(bw=100, delay='15ms', loss=1, max_queue_size=1000, use_htb=True))
@@ -68,7 +68,7 @@ class TestCaseManager():
         self.linkopts.append(dict(bw=100, delay='5ms', loss=3, max_queue_size=1000, use_htb=True))
         self.linkopts.append(dict(bw=100, delay='5ms', loss=7, max_queue_size=1000, use_htb=True))
 
-        self.linkopts.append(dict(bw=100, delay='110ms', loss=3, max_queue_size=1000, use_htb=True))
+        self.linkopts.append(dict(bw=100, delay='10ms', loss=3, max_queue_size=1000, use_htb=True))
         self.linkopts.append(dict(bw=100, delay='100ms', loss=7, max_queue_size=1000, use_htb=True))
 
         self.linkopts.append(dict(bw=100, delay='15ms', loss=3, max_queue_size=1000, use_htb=True))
@@ -78,7 +78,7 @@ class TestCaseManager():
         self.linkopts.append(dict(bw=1000, delay='5ms', max_queue_size=1000, use_htb=True))
         self.linkopts.append(dict(bw=1000, delay='5ms', max_queue_size=1000, use_htb=True))
 
-        self.linkopts.append(dict(bw=1000, delay='110ms', max_queue_size=1000, use_htb=True))
+        self.linkopts.append(dict(bw=1000, delay='10ms', max_queue_size=1000, use_htb=True))
         self.linkopts.append(dict(bw=1000, delay='100ms', max_queue_size=1000, use_htb=True))
 
         self.linkopts.append(dict(bw=1000, delay='15ms', max_queue_size=1000, use_htb=True))
@@ -87,7 +87,7 @@ class TestCaseManager():
         self.linkopts.append(dict(bw=1000, delay='5ms', loss=1, max_queue_size=1000, use_htb=True))
         self.linkopts.append(dict(bw=1000, delay='5ms', loss=3, max_queue_size=1000, use_htb=True))
 
-        self.linkopts.append(dict(bw=1000, delay='110ms', loss=1, max_queue_size=1000, use_htb=True))
+        self.linkopts.append(dict(bw=1000, delay='10ms', loss=1, max_queue_size=1000, use_htb=True))
         self.linkopts.append(dict(bw=1000, delay='100ms', loss=3, max_queue_size=1000, use_htb=True))
 
         self.linkopts.append(dict(bw=1000, delay='15ms', loss=1, max_queue_size=1000, use_htb=True))
@@ -96,7 +96,7 @@ class TestCaseManager():
         self.linkopts.append(dict(bw=1000, delay='5ms', loss=3, max_queue_size=1000, use_htb=True))
         self.linkopts.append(dict(bw=1000, delay='5ms', loss=7, max_queue_size=1000, use_htb=True))
 
-        self.linkopts.append(dict(bw=1000, delay='110ms', loss=3, max_queue_size=1000, use_htb=True))
+        self.linkopts.append(dict(bw=1000, delay='10ms', loss=3, max_queue_size=1000, use_htb=True))
         self.linkopts.append(dict(bw=1000, delay='100ms', loss=7, max_queue_size=1000, use_htb=True))
 
         self.linkopts.append(dict(bw=1000, delay='15ms', loss=3, max_queue_size=1000, use_htb=True))
