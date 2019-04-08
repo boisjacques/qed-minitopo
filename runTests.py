@@ -112,7 +112,6 @@ def runTest(net, i=0, param="5MB"):
     loss = net.pingAll()
     if loss != 0:
         print "test network invalid"
-        # CLI(net)
         return param, -2, -2
     client, server = net.get('h1', 'h2')
     print "Starting QED server"
@@ -145,6 +144,7 @@ if __name__ == '__main__':
     net.start()
     if len(sys.argv == 2):
         if sys.argv[1] == 't':
+            net.startTerms()
             runTest(net)
         else:
             print "invalid parameter, stopping..."
