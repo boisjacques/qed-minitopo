@@ -106,3 +106,5 @@ venv.bak/
 \.idea/
 
 follow-up-tests/
+
+initial-tests/
