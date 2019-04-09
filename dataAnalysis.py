@@ -56,15 +56,15 @@ def concatFrames(f0, f1, f2, f3, f4, f5, f6, f7, f8, _bandwidth, _filesize):
         failureRate = 1 - count / 25
         failureRate *= 100
         _failureRates.append(failureRate)
-    failureRates = pd.DataFrame(_failureRates, index=titles)
+    failureRates = pd.DataFrame(_failureRates, index=titles, columns=["failure rate"])
     plotData = plotData.fillna(plotData.quantile())
     color = {'boxes': 'DarkGreen', 'whiskers': 'DarkOrange', 'medians': 'DarkBlue', 'caps': 'Gray'}
 
     fig = plt.figure()
     ax1 = fig.add_subplot(111)
     ax2 = ax1.twinx()
-    plotData.plot.box(ax=ax1, color=color, sym='+', positions=range(9))
-    failureRates.plot(ax=ax2, color='b', legend=False)
+    plotData.plot.box(ax=ax1, color=color, sym='+', positions=range(9), title=_bandwidth + " " + _filesize)
+    failureRates.plot.bar(ax=ax2, color='r', alpha=0.3)
     ax1.set_ylabel('Seconds')
     ax2.set_ylabel('Failure Rate in %')
     plt.xlim(-0.7, 8.7)
