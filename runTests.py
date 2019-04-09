@@ -28,7 +28,7 @@ def testHandler(net):
     date = time.strftime('%y%m%j-%X')
     filename = "report-" + date + ".csv"
 
-    for i in range(0, len(tcm.linkopts)):
+    for i in range(0, len(tcm.linkopts) / 2):
         print "deleting links 1"
         net.delLinkBetween(client, switch)
         net.delLinkBetween(server, switch)
