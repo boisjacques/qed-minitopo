@@ -28,7 +28,7 @@ def testHandler(net):
     date = time.strftime('%y%m%j-%X')
     filename = "report-" + date + ".csv"
 
-    for i in range(0, len(tcm.linkopts)):
+    for i in range(0, len(tcm.linkopts) / 2):
         print "deleting links 1"
         net.delLinkBetween(client, switch)
         net.delLinkBetween(server, switch)
@@ -112,7 +112,6 @@ def runTest(net, i=0, param="5MB"):
     loss = net.pingAll()
     if loss != 0:
         print "test network invalid"
-        # CLI(net)
         return param, -2, -2
     client, server = net.get('h1', 'h2')
     print "Starting QED server"
@@ -143,9 +142,13 @@ if __name__ == '__main__':
     setLogLevel('info')
     net = setupTestbed()
     net.start()
-    if len(sys.argv) == 2:
+    if len(sys.argv) >= 2:
         if sys.argv[1] == 't':
-            runTest(net)
+            if sys.argv[2] == "5MB" or sys.argv[2] == "20MB" or sys.argv[2] == "50MB":
+                runTest(net, param=sys.argv[2])
+            else:
+                net.startTerms()
+                runTest(net)
         else:
             print "invalid parameter, stopping..."
     else:
